@@ -1,0 +1,67 @@
+/* Main Background And Card */
+body {
+    margin-top: 20px;
+    background-color: #0F121D;
+    font-family: 'Inter';
+}
+
+.container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 100px
+}
+
+.mh {
+    margin-top: 0;
+    align-items: center;
+    color: #78AAFF;
+    font-size: 50px;
+    font-weight: 1000;
+}
+
+span {
+    color: #0F121D;
+}
+
+.card {
+    border-radius: 20px;
+    width: 600px;
+    height: 500px;
+    background-color: #1A1D2B;
+}
+
+
+/* Steps bar designs */
+.steps-bar {
+    margin: 30px 70px 0px 80px;
+    display: flex;
+    /* gap: 0.5rem; */
+    justify-items: center;
+    width: 70%;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.step {
+    display: flex;
+    font-size: 30px;
+    margin: 1px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    background-color: #0F121D;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 15%;
+    height: 1px;
+    background-color: white;
+}
