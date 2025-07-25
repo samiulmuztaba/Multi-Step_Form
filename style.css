@@ -343,6 +343,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: #2e6bf6;
   color: white;
   outline: none;
+  cursor: pointer;
+}
+
+.step4 input:hover{
+  opacity: 70%;
 }
 
 /* Button Style Starts Here */

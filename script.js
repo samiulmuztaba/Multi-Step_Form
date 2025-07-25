@@ -5,6 +5,7 @@ const step1 = document.querySelector(".step1");
 const step2 = document.querySelector(".step2");
 const step3 = document.querySelector(".step3");
 const step4 = document.querySelector(".step4");
+const submitBtn = document.querySelector('.step4 input')
 
 let stepADs = [1];
 
@@ -82,3 +83,6 @@ buttons.forEach((btn) => {
   });
 });
 
+submitBtn.addEventListener('click', ()=>{
+  location.reload();
+})
