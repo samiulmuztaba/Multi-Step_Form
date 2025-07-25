@@ -1,45 +1,61 @@
 /* Main Background And Card */
 body {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   background-color: #0f121d;
   font-family: "Inter";
+  overflow-x: hidden;
 }
 
 .container {
-  padding-top: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  padding-top: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   height: auto;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
 }
 
 .mh {
   margin-top: 0;
   align-items: center;
   color: #78aaff;
-  font-size: 50px;
+  font-size: 3.125rem; /* 50px */
   font-weight: 1000;
+  margin-left: 1rem; /* add some left margin */
+  margin-right: 1rem;
+  text-align: center;
 }
 
-span {
+._gap {
   color: #0f121d;
 }
 
 .card {
   border-radius: 20px;
-  width: 600px;
-  /* height: 500px; */
+  width: 600px; /* 37.5rem */
+  max-width: 100%; /* prevent overflow */
+  margin: 0 1.5rem; /* 24px horizontal margin */
   background-color: #1a1d2b;
-  padding-bottom: 30px;
+  padding-bottom: 30px; /* 1.875rem */
+  margin: 0 auto; /* center horizontally */
+  width: 600px;
 }
 
-/* Steps bar designs */
 .steps-bar {
-  margin: 30px 70px 0px 80px;
+  margin: 1.875rem 4.375rem 0rem 5rem;
   display: flex;
-  /* gap: 0.5rem; */
   justify-items: center;
   width: 70%;
   align-content: center;
@@ -48,11 +64,12 @@ span {
 }
 
 .step {
+  /* font-family: monoscape; */
   display: flex;
-  font-size: 30px;
-  margin: 1px;
-  width: 45px;
-  height: 45px;
+  font-size: 1.875rem;
+  margin: 0.0625rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
   border-radius: 50%;
   color: white;
   background-color: #0f121d;
@@ -61,19 +78,15 @@ span {
 }
 
 .line {
+  /* display: none; */
   width: 15%;
-  height: 1px;
+  height: 0.0625rem;
   background-color: white;
 }
 
-/* Main Form Design Starts! */
-/* #step {
-  display: none;
-} */
-
 .step1,
 .step2 {
-  margin: 40px 70px;
+  margin: 2.5rem 4.375rem;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -82,21 +95,15 @@ span {
   row-gap: 1.5rem;
 }
 
-.step2 {
-  display: none;
-}
-
-.step3 {
-  display: none;
-}
-
+.step2,
+.step3,
 .step4 {
   display: none;
 }
 
 .name {
   display: flex;
-  column-gap: 10px;
+  column-gap: 0.625rem;
 }
 
 .name input {
@@ -104,10 +111,10 @@ span {
 }
 
 input {
-  height: 35px;
-  border-radius: 5px;
+  height: 2.5rem;
+  border-radius: 0.3125rem;
   border: 1px solid #2a2e45;
-  padding: 5px 10px 5px 10px;
+  padding: 0.3125rem 0.625rem;
   background-color: #141823;
   color: white;
 }
@@ -117,14 +124,11 @@ input::placeholder {
 }
 
 input:focus {
-  border: 2px solid #2e6bf6;
+  border: 0.125rem solid #2e6bf6;
   outline: none;
 }
 
-#phone {
-  width: 100%;
-}
-
+#phone,
 .iti {
   width: 100%;
 }
@@ -133,9 +137,9 @@ input:focus {
   background-color: #141823 !important;
   color: white !important;
   border: 1px solid #2a2e45 !important;
-  padding: 5px 52px !important;
-  border-radius: 5px !important;
-  height: 45px !important;
+  padding: 0.3125rem 3.25rem !important;
+  border-radius: 0.3125rem !important;
+  height: 2.8125rem !important;
 }
 
 .iti input::placeholder {
@@ -148,12 +152,12 @@ input:focus {
 }
 
 .iti__selected-flag {
-  padding: 0 10px;
-  height: 35px;
+  padding: 0 0.625rem;
+  height: 2.1875rem;
 }
 
 .iti input:focus {
-  border: 2px solid #2e6bf6 !important;
+  border: 0.125rem solid #2e6bf6 !important;
   outline: none;
 }
 
@@ -167,34 +171,21 @@ input[type="date"] {
   color: white;
   background-color: #141823;
   border: 1px solid #2a2e45;
-  height: 35px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  height: 2.1875rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3125rem;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
-  /* width: 90% */
-}
-
-input[type="date"]::-webkit-datetime-edit-text,
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field,
-input[type="date"]::-webkit-datetime-edit-year-field {
-  color: #6b7280;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  pointer-events: none;
+  font-size: 0.875rem;
 }
 
 .gender-input {
   display: flex;
-  gap: 20px; /* space between options */
+  gap: 1.25rem;
   align-items: center;
 }
 
 .gender-input input[type="radio"] {
-  accent-color: #2e6bf6; /* makes radio blue on supported browsers */
+  accent-color: #2e6bf6;
   cursor: pointer;
   margin: 0;
 }
@@ -203,30 +194,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;
   cursor: pointer;
   user-select: none;
-  font-size: 16px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 6px; /* space between radio and text */
+  gap: 0.375rem;
 }
 
 .step3 {
-  /* display: flex; */
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
   flex-direction: column;
   row-gap: 1rem;
   justify-content: center;
   align-items: center;
-  height: 150px; /* keep vertical centering */
-  padding: 0 20px; /* some side padding so it doesn't hug edges */
+  height: 9.375rem;
+  padding: 0 1.25rem;
 }
 
 .theme-switcher {
-  width: 100%; /* let it fill horizontally */
-  max-width: 400px; /* max width to avoid it getting too wide */
-  display: flex; /* keep flex for children */
-  border: 2px solid #2e6bf6;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+  border: 0.125rem solid #2e6bf6;
+  border-radius: 0.5rem;
   overflow: hidden;
   user-select: none;
 }
@@ -236,7 +226,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .theme-switcher label {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   cursor: pointer;
   color: white;
   background-color: #1a1d2b;
@@ -256,10 +246,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .toggle-switch {
-  /* position: absolute; */
-  margin-top: -30px;
-  width: 60px;
-  height: 30px;
+  margin-top: -1.875rem;
+  width: 3.75rem;
+  height: 1.875rem;
 }
 
 .toggle-switch input {
@@ -271,21 +260,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .toggle-switch label {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
+  width: 3.125rem;
+  height: 1.5rem;
   background-color: #555;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   cursor: pointer;
 }
 
 .toggle-switch label::before {
   content: "";
   position: absolute;
-  top: 50%; /* center vertically */
-  left: 4px; /* small left padding */
-  transform: translateY(-50%); /* perfectly vertical center */
-  width: 18px;
-  height: 18px;
+  top: 50%;
+  left: 0.25rem;
+  transform: translateY(-50%);
+  width: 1.125rem;
+  height: 1.125rem;
   background-color: white;
   border-radius: 50%;
   transition: 0.3s;
@@ -296,63 +285,59 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .toggle-switch input:checked + label::before {
-  left: calc(100% - 22px); /* moves knob to right */
+  left: calc(100% - 1.375rem);
 }
 
 .email-preference {
   background-color: #2a2e45;
   width: 65%;
-  max-width: 400px;
-  height: px;
-  border-radius: 10px;
-  padding: 10px 20px; /* give vertical breathing room */
+  max-width: 25rem;
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.25rem;
   color: white;
   display: flex;
-  justify-content: space-between; /* separates text and toggle */
-  align-items: center; /* vertical centering */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.step4{
-  margin-top: 30px;
-  /* color: white; */
-  margin-bottom: 30px;
+.step4 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
   flex-direction: column;
-  /* row-gap: 1rem; */
   justify-content: center;
   align-items: center;
 }
 
-.step4 h2{
-  margin-top: -10px;
+.step4 h2 {
+  margin-top: -0.625rem;
   color: white;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: bold;
 }
 
-.step4 p{
-  margin-top: -10px;
+.step4 p {
+  margin-top: -0.625rem;
   width: 70%;
   color: white;
   text-align: center;
 }
 
-.step4 input{
-  width: 90px;
-  height: 35px;
-  border-radius: 10px;
+.step4 input {
+  width: 5.625rem;
+  height: 2.1875rem;
+  border-radius: 0.625rem;
   background-color: #2e6bf6;
   color: white;
   outline: none;
   cursor: pointer;
 }
 
-.step4 input:hover{
+.step4 input:hover {
   opacity: 70%;
 }
 
-/* Button Style Starts Here */
 .buttons {
-  margin: 0 70px 0 70px;
+  margin: 0 4.375rem;
   display: flex;
   align-content: center;
   align-items: center;
@@ -360,15 +345,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #nav-button {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   border: none;
   color: #0f121d;
   background-color: #2e6bf6;
-  font-size: 30px;
+  font-size: 1.875rem;
   display: flex;
-  /* font-weight: 900; */
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -377,4 +361,87 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .button-prev {
   display: inline-block;
   transform: rotate(180deg);
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 600px) {
+  .mh {
+    font-size: 2rem; /* scale down headline */
+  }
+}
+
+@media (max-width: 530px) {
+  .name-fields {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step1, .step2{
+    margin: 1.5rem 1.5rem;
+    row-gap: 0.5rem;
+  }
+  
+  .name-fields input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .steps-bar{
+    margin: 0.5rem 1rem 0 3rem;
+  }
+
+  /* .line{
+    display: none;
+  } */
+  
+  .step1, .step2{
+    margin: 1rem 1rem;
+    row-gap: 0.7rem;
+  }
+  .mh {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 420px){
+  .step{
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  .sh{
+    display:none;
+  }
+
+  .ste
+
+  .card{
+    margin: 10px 10px;
+  }
+  .step1, .step2{
+    margin: 1.2rem 0.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    margin: 0 1rem 0 1rem; /* or 5vw if you want more fluid spacing */
+  }
+}
+
+@media (max-width: 323px){
+  .step1, .step2{
+    margin: 1.2rem 0.2rem;
+  }
+
 }
