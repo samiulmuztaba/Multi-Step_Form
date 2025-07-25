@@ -1,44 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
     <title>Multi-Step Form HTML CSS JS</title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1 class="mh"><span>__</span>Multi-Step Form <br>HTML → CSS → JS</h1>
-        <!-- <h1 class="sh">HTML → CSS → JS</h1> -->
-        <div class="card">
-            <div class="steps-bar">
-                <div class="step" id="1">
-                    <p>1</p>
-                </div>
-                <div class="line"></div>
-                <div class="step" id="2">
-                    <p>2</p>
-                </div>
-                <div class="line"></div>
-                <div class="step" id="3">
-                    <p>3</p>
-                </div>
-                <div class="line"></div>
-                <div class="step" id="4">
-                    <p>4</p>
-                </div>
+      <h1 class="mh"><span>__</span>Multi-Step Form <br />HTML → CSS → JS</h1>
+      <!-- <h1 class="sh">HTML → CSS → JS</h1> -->
+      <div class="card">
+        <div class="steps-bar">
+          <div class="step" id="1">
+            <p>1</p>
+          </div>
+          <div class="line"></div>
+          <div class="step" id="2">
+            <p>2</p>
+          </div>
+          <div class="line"></div>
+          <div class="step3-wrapper">
+            <div class="step" id="3">
+              <p>3</p>
             </div>
-            <div class="main-form"></div>
-            <div class="buttons">
-                <button class="button-prev">←</button>
-                <button class="button-next">→</button>
-            </div>
+            <!-- <label for="">preferences</label> -->
+          </div>
+
+          <div class="line"></div>
+          <div class="step" id="4">
+            <p>4</p>
+          </div>
         </div>
+        <div class="main-form">
+          <div class="step1" . id="step">
+            <!-- <form action=""> -->
+            <div class="name">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <input type="email" name="" id="" placeholder="Email Adress" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" />
+          </div>
+          <div class="step2">
+            <input type="text" placeholder="Username" />
+            <input id="phone" type="tel" />
+
+            <input type="date" id="dob" placeholder=" " />
+            <!-- <label for="dob">Date of Birth</label> -->
+            <div class="gender-input">
+              <input type="radio" name="gender" /> <label for="">Male</label>
+              <input type="radio" name="gender" /> <label for="">Female</label>
+            </div>
+          </div>
+          <div class="step3">
+            <div class="theme-switcher">
+              <input
+                type="radio"
+                name="theme"
+                id="light"
+                value="light"
+                checked
+              />
+              <label for="light">Light</label>
+
+              <input type="radio" name="theme" id="dark" value="dark" />
+              <label for="dark">Dark</label>
+
+              <input type="radio" name="theme" id="system" value="system" />
+              <label for="system">System</label>
+            </div>
+            <div class="email-preference">
+              <p style="margin: 0; font-weight: 500">
+                Receive Email Notifications
+              </p>
+              <div class="toggle-switch">
+                <input type="checkbox" id="emailToggle" />
+                <label for="emailToggle"></label>
+              </div>
+            </div>
+          </div>
+          <div class="step4">
+            <h1> 🎉</h1>
+            <h2>You're All Set!</h2>
+            <p>You can now go back(← icon) and see /change the info you have given, if you’re done, just click the “submit” button downwards</p>
+            <input type="button" value="Submit">
+          </div>
+          <!-- </form> -->
+        </div>
+        <div class="buttons">
+          <button class="button-prev" id="nav-button">➜</button>
+          <button class="button-next" id="nav-button">➜</button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
 
+      function geoIpLookup(callback) {
+        fetch("https://ipinfo.io/json?token=YOUR_TOKEN_HERE")
+          .then((response) => response.json())
+          .then((data) => callback(data.country))
+          .catch(() => callback("us")); // fallback to US if error
+      }
+
+      window.intlTelInput(input, {
+        initialCountry: "auto",
+        geoIpLookup: geoIpLookup,
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+    </script>
+  </body>
 </html>
